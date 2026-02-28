@@ -1,23 +1,24 @@
 import express from 'express';
-import {getBooks, addBook, deleteBookById, getBookById, updateBookById} from './controller.js';
+import { getBooks, addBook, deleteBookById, getBookById, updateBookById } from './controller.js';
 
 const route = express.Router();
+
+// Dapatkan semua book
+route.get('/books', getBooks);
+
+// Dapatkan book berdasarkan id
+route.get('/books/:id', getBookById);
 
 // Tes get all books
 route.post('/books', addBook);
 
-route.get('/books', getBooks);
-
-// Dapatkan books berdasarkan id
-route.get('/books/:id', getBookById);
-
-// Post books
+// Post book
 route.post('/books', addBook);
 
-// Update informasi books
+// Update informasi book
 route.put('/books/:id', updateBookById);
 
-// Hapus books
+// Hapus book
 route.delete('/books/:id', deleteBookById);
 
 
