@@ -9,10 +9,7 @@ route.get('/books', getBooks);
 // Dapatkan book berdasarkan id
 route.get('/books/:id', getBookById);
 
-// Tes get all books
-route.post('/books', addBook);
-
-// Post book
+// Tambah Buku
 route.post('/books', addBook);
 
 // Update informasi book
